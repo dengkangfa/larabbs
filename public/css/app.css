@@ -8395,3 +8395,9 @@ body {
   color: inherit;
 }
 
+.register-page img.captcha {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+

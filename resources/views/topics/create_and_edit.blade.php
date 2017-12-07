@@ -12,7 +12,15 @@
     <script type="text/javascript">
         $(document).ready(function () {
             let editor = new Simditor({
-                textarea: $('#editor')
+                textarea: $('#editor'),
+                upload: {
+                    url: '{{ route('topics.upload_image') }}',
+                    params: { _token: '{{ csrf_token() }}'},
+                    fileKey: 'upload_file', // 是服务器端获取图片的键值
+                    connectionCount: 3, // 最多只能同时上传 3 张图片；
+                    leaveConfirm: '文件上传中，关闭此页面将取消上传。'// 上传过程中，用户关闭页面时的提醒。
+                },
+                pasteImage: true // 设定是否支持图片黏贴上传
             });
         })
     </script>

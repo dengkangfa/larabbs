@@ -13,7 +13,9 @@
         "hieu-le/active": "~3.5",
         "mews/purifier": "~2.0",
         "guzzlehttp/guzzle": "~6.3",
-        "overtrue/pinyin": "~3.0"
+        "overtrue/pinyin": "~3.0",
+        "predis/predis": "~1.0",
+        "laravel/horizon": "~1.0"
     },
     "require-dev": {
         "filp/whoops": "~2.0",

@@ -10,16 +10,6 @@ use App\Jobs\TranslateSlug;
 
 class TopicObserver
 {
-    public function creating(Topic $topic)
-    {
-        //
-    }
-
-    public function updating(Topic $topic)
-    {
-        //
-    }
-
     public function saving(Topic $topic)
     {
         // XSS 过滤
@@ -36,5 +26,10 @@ class TopicObserver
             // 推送任务到队列
             dispatch(new TranslateSlug($topic));
         }
+    }
+
+    public function deleted(Topic $topic)
+    {
+        \DB::table('replies')->where('topic_id', $topic->id)->delete();
     }
 }

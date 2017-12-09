@@ -1,6 +1,7 @@
 /node_modules
 /public/storage
 /public/fonts
+/public/packages
 /vendor
 /.idea
 Homestead.json

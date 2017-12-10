@@ -13,7 +13,8 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-         Commands\CalculateActiveUser::class
+         Commands\CalculateActiveUser::class,
+         Commands\SyncUserActivedAt::class
     ];
 
     /**
@@ -27,6 +28,9 @@ class Kernel extends ConsoleKernel
         // $schedule->command('inspire')
         //          ->hourly();
         $schedule->command('larabbs:calculate-active-user')->hourly();
+
+        // 明天零时执行一次
+        $schedule->command('larabbs:sync-user-actived-at')->dailyAt('00:00');
     }
 
     /**

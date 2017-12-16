@@ -40,4 +40,17 @@ return [
         'key' => env('BAIDU_TRANSLATE_KEY')
     ],
 
+    'github' => [
+        'client_id'     => env('GITHUB_CLIENT_ID'),
+        'client_secret' => env('GITHUB_CLIENT_SECRET'),
+        'redirect'      => str_finish(env('APP_URL'), '/') . 'auth/callback?driver=github',
+    ],
+
+    'wechat' => [
+        'client_id'     => env('WEIXIN_KEY'),
+        'client_secret' => env('WEIXIN_SECRET'),
+        'redirect'      => str_finish(env('App_URL'), '/') . 'auth/callback?driver=wechat',
+        'auth_base_uri' => 'https://open.weixin.qq.com/connect/qrconnect',
+    ],
+
 ];

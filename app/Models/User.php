@@ -11,6 +11,7 @@ class User extends Authenticatable
 {
     use HasRoles;
     use Traits\ActiveUserHelper;
+    use Traits\UserSocialiteHelper;
     use Traits\LastActivedAtHelper;
     use Notifiable {
         notify as protected laravelNotify;
@@ -22,7 +23,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'introduction', 'avatar'
+        'name', 'email', 'password', 'introduction', 'avatar', 'github_id', 'github_name', 'github_url'
     ];
 
     /**

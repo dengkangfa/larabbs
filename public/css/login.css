@@ -1,0 +1,22 @@
+body {
+  font-family: Hiragino Sans GB, "Hiragino Sans GB",  "Microsoft YaHei", Arial, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #f7fafc;
+  overflow: hidden;
+  margin: 0;
+}
+
+.position-ref {
+  position: relative;
+}
+
+#particles-js {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+

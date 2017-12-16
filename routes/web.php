@@ -17,6 +17,10 @@ Route::get('/', 'TopicsController@index')->name('root');
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+Route::get('auth/oauth', 'Auth\AuthController@oauth')->name('auth.oauth');
+Route::get('auth/callback', 'Auth\AuthController@callback')->name('auth.callback');
+Route::get('signup', 'Auth\AuthController@create')->name('signup');
+Route::post('signup', 'Auth\AuthController@createNewUser')->name('signup');
 
 // Registration Routes
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');

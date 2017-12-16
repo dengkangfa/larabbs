@@ -18,7 +18,8 @@
         "laravel/horizon": "~1.0",
         "spatie/laravel-permission": "~2.7",
         "viacreative/sudo-su": "~1.1",
-        "summerblue/administrator": "~1.1"
+        "summerblue/administrator": "~1.1",
+        "laravel/socialite": "^3.0"
     },
     "require-dev": {
         "filp/whoops": "~2.0",

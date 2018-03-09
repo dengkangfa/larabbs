@@ -177,7 +177,9 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        App\Providers\Socialite\WechatServiceProvider::class
+        App\Providers\Socialite\WechatServiceProvider::class,
+
+        App\Providers\EasySmsServiceProvider::class
 
     ],
 

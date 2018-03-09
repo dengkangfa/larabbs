@@ -46,7 +46,7 @@ return [
         'redirect'      => str_finish(env('APP_URL'), '/') . 'auth/callback?driver=github',
     ],
 
-    'wechat' => [
+    'weixin' => [
         'client_id'     => env('WEIXIN_KEY'),
         'client_secret' => env('WEIXIN_SECRET'),
         'redirect'      => str_finish(env('App_URL'), '/') . 'auth/callback?driver=wechat',

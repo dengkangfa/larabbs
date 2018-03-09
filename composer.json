@@ -23,7 +23,8 @@
 	"dingo/api": "2.0.0-alpha1",
         "overtrue/easy-sms": "^1.0",
         "laravel/tinker": "^1.0",
-        "doctrine/dbal": "^2.6"
+        "doctrine/dbal": "^2.6",
+        "gregwar/captcha": "^1.1"
     },
     "require-dev": {
         "filp/whoops": "~2.0",

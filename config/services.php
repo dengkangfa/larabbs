@@ -49,7 +49,7 @@ return [
     'weixin' => [
         'client_id'     => env('WEIXIN_KEY'),
         'client_secret' => env('WEIXIN_SECRET'),
-        'redirect'      => str_finish(env('App_URL'), '/') . 'auth/callback?driver=wechat',
+        'redirect' => env('WEIXIN_REDIRECT_URI'),
         'auth_base_uri' => 'https://open.weixin.qq.com/connect/qrconnect',
     ],
 

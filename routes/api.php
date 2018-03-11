@@ -5,7 +5,8 @@ use Illuminate\Http\Request;
 $api = app('Dingo\Api\Routing\Router');
 
 $api->version('v1', [
-    'namespace' => 'App\Http\Controllers\Api'
+    'namespace' => 'App\Http\Controllers\Api',
+    'middleware' => 'serializer:array'
 ], function($api) {
     $api->group([
         'middleware' => 'api.throttle',
@@ -33,5 +34,12 @@ $api->version('v1', [
         // 删除token
         $api->delete('authorizations/current', 'AuthorizationsController@destroy')
             ->name('api.authorizations.destroy');
+        
+        // 需要 token 验证的接口
+        $api->group(['middleware' => 'api.auth'], function($api) {
+            // 当前登录用户信息
+            $api->get('user', 'UsersController@me')
+                ->name('api.user.show');
+        });
     });
 });

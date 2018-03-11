@@ -26,7 +26,8 @@
         "doctrine/dbal": "^2.6",
         "gregwar/captcha": "^1.1",
         "socialiteproviders/weixin": "^4.0",
-        "tymon/jwt-auth": "1.0.0-rc.1"
+        "tymon/jwt-auth": "1.0.0-rc.1",
+        "liyu/dingo-serializer-switch": "^0.3.0"
     },
     "require-dev": {
         "filp/whoops": "~2.0",

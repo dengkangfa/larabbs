@@ -9,6 +9,11 @@ use App\Transformers\UserTransformer;
 
 class UsersController extends Controller
 {
+    public function me()
+    {
+        return $this->response->item($this->user(), new UserTransformer());
+    }
+
     public function store(UserRequest $request)
     {
         $verifyData = \Cache::get($request->verification_key);
@@ -54,10 +59,5 @@ class UsersController extends Controller
         $user->update($attributes);
 
         return $this->response->item($user, new UserTransformer());
-    }
-
-    public function me()
-    {
-        return $this->response->item($this->user(), new UserTransformer());
     }
 }

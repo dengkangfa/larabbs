@@ -50,7 +50,7 @@ class Kernel extends HttpKernel
             // 处理路由绑定
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             // 记录用户最后活跃时间
-            \App\Http\Middleware\RecordLastActivedTime::class
+//            \App\Http\Middleware\RecordLastActivedTime::class
         ],
 
         'api' => [

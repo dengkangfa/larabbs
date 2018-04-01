@@ -28,6 +28,8 @@ class User extends Authenticatable implements JWTSubject
         'weixin_openid', 'weixin_unionid'
     ];
 
+//    protected $dates = ['created_at', 'updated_at', 'last_actived_at'];
+
     /**
      * The attributes that should be hidden for arrays.
      *

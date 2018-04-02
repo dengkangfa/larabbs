@@ -25,7 +25,7 @@ class User extends Authenticatable implements JWTSubject
      */
     protected $fillable = [
         'name', 'phone', 'email', 'password', 'introduction', 'avatar', 'github_id', 'github_name', 'github_url',
-        'weixin_openid', 'weixin_unionid'
+        'weixin_openid', 'weixin_unionid', 'registration_id'
     ];
 
 //    protected $dates = ['created_at', 'updated_at', 'last_actived_at'];

@@ -179,7 +179,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\Socialite\WechatServiceProvider::class,
 
-        App\Providers\EasySmsServiceProvider::class
+        App\Providers\EasySmsServiceProvider::class,
+        App\Providers\JpushServiceProvider::class
 
     ],
 

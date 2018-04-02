@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2517a59395933f147d4d0b08b901b662",
-    "content-hash": "7852a634fc6657c8951891038ed62eba",
+    "hash": "44c60b6287681e7f53910fd388ab38fa",
+    "content-hash": "0c3a183246daf7878b9f385a8470cdc1",
     "packages": [
         {
             "name": "cakephp/chronos",
@@ -1396,6 +1396,49 @@
                 }
             ],
             "time": "2015-04-20 18:58:01"
+        },
+        {
+            "name": "jpush/jpush",
+            "version": "v3.5.34",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jpush/jpush-api-php-client.git",
+                "reference": "86ff095c1b8ec947ad1a13f40faeb67a191b8301"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/jpush/jpush-api-php-client/86ff095c1b8ec947ad1a13f40faeb67a191b8301.zip",
+                "reference": "86ff095c1b8ec947ad1a13f40faeb67a191b8301",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "JPush\\": "src/JPush/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "JPush",
+                    "email": "support@jpush.cn",
+                    "homepage": "https://www.jpush.cn/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "JPush API PHP Client",
+            "homepage": "https://github.com/jpush/jpush-api-php-client",
+            "time": "2018-03-09 02:46:21"
         },
         {
             "name": "laravel/framework",

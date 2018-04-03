@@ -28,7 +28,8 @@
         "socialiteproviders/weixin": "^4.0",
         "tymon/jwt-auth": "1.0.0-rc.1",
         "liyu/dingo-serializer-switch": "^0.3.0",
-        "jpush/jpush": "^3.5"
+        "jpush/jpush": "^3.5",
+        "laravel/passport": "~4.0"
     },
     "require-dev": {
         "filp/whoops": "~2.0",

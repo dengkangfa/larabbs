@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Auth;
+use Laravel\Passport\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -10,6 +11,7 @@ use Tymon\JWTAuth\Contracts\JWTSubject;
 
 class User extends Authenticatable implements JWTSubject
 {
+    use HasApiTokens;
     use HasRoles;
     use Traits\ActiveUserHelper;
     use Traits\UserSocialiteHelper;
@@ -90,6 +92,15 @@ class User extends Authenticatable implements JWTSubject
         }
 
         $this->attributes['avatar'] = $path;
+    }
+
+    public function findForPassport($username)
+    {
+        filter_var($username, FILTER_VALIDATE_EMAIL) ?
+            $credentials['email'] = $username :
+            $credentials['phone'] = $username;
+
+        return self::where($credentials)->first();
     }
 
     /**

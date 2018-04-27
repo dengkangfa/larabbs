@@ -35,9 +35,9 @@
                             @endif
                         </div>
 
-                        <a type="submit" class="btn btn-success btn-block">
+                        <button type="submit" class="btn btn-success btn-block">
                             <span class="glyphicon glyphicon-log-in"></span> 登 录
-                        </a>
+                        </button>
 
                         <hr>
 
